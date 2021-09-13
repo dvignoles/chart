@@ -1,0 +1,83 @@
+
+<div id="mapid" style="width:100%; height: 500px;"></div>
+
+<script>var map = L.map('mapid').setView([22.755921,90.866328], 5);
+
+// Basemap
+var Stadia_Outdoors = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+});
+Stadia_Outdoors.addTo(map);
+
+var legend = L.control({ position: "bottomright"});
+
+// Legend
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += '<i style="background: #00420d"></i><span>Evergreen</span><br>';
+  div.innerHTML += '<i style="background: #5aff01"></i><span>Deciduous</span><br>';
+  div.innerHTML += '<i style="background: #078f00"></i><span>Mixed Forest</span><br>';
+  div.innerHTML += '<i style="background: #622c05"></i><span>Mangrove</span><br>';
+  div.innerHTML += '<i style="background: #d44633"></i><span>Flooded Forest</span><br>';
+
+  div.innerHTML += '<i style="background: #ffce9d"></i><span>Savannah</span><br>';
+  div.innerHTML += '<i style="background: #ff9501"></i><span>Grass</span><br>';
+  div.innerHTML += '<i style="background: #00048c"></i><span>Water</span><br>';
+  div.innerHTML += '<i style="background: #0083fe"></i><span>Wetland</span><br>';
+  div.innerHTML += '<i style="background: #fff301"></i><span>Pasture/Cropland</span><br>';
+
+
+  div.innerHTML += '<i style="background: #ed73ff"></i><span>Rice Paddy</span><br>';
+  div.innerHTML += '<i style="background: #95b600"></i><span>Plantation</span><br>';
+  div.innerHTML += '<i style="background: #52f3d6"></i><span>Aquaculture</span><br>';
+  div.innerHTML += '<i style="background: #ff0501"></i><span>Urban</span><br>';
+  div.innerHTML += '<i style="background: #4b4b4b"></i><span>Barren</span><br>';
+
+  return div;
+};
+
+legend.addTo(map);
+
+// Time Dimension Setup
+var timeDimension = new L.TimeDimension({
+    timeInterval: "2001-01-01/2019-12-31",
+    period: "P1Y",
+});
+
+map.timeDimension = timeDimension;
+
+var player = new L.TimeDimension.Player({
+    transitionTime: 100,
+    loop: false,
+    startOver: true
+}, timeDimension);
+
+var timeDimensionControlOptions = {
+    player: player,
+    timeDimension: timeDimension,
+    position: 'bottomleft',
+    autoPlay: false,
+    minSpeed: 1,
+    speedStep: 0.5,
+    maxSpeed: 15,
+    timeSliderDragUpdate: true,
+    playButton: false,
+    speedSlider: false
+};
+var timeDimensionControl = new L.Control.TimeDimension(timeDimensionControlOptions);
+map.addControl(timeDimensionControl);
+
+// Layers
+var wmsUrl = "https://chartows.environmentalcrossroads.net/chart/wms"
+var wms_lc = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:SE-Asia_LandCover_BU_7p50s_aTS2001-2019',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var td_wms_lc = L.timeDimension.layer.wms(wms_lc)
+
+td_wms_lc.addTo(map);
+</script>
