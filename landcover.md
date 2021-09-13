@@ -3,9 +3,17 @@ layout: page
 title: Landcover
 ---
 
-### Maps
+## Landcover 
 {% include leaflet_landcover.html %}
 
-### Description
+### About 
+Classification of 15 different land cover classes. 
+
+> Source: Boston University
+>
+> Temporal Resolution: Annual 2001-2019
+>
+> Spatial Resolution: ?
+
 
 ### Links
