@@ -9,11 +9,17 @@ Map here
 
 ## About
 
-About here
+`Description of WBM`
+
+__Source__: CUNY Advanced Science Research Center 
+
+__Temporal Resolution__: Annual/Monthly 2001-2019
+
+__Spatial Resolution__: 1 minute 
 
 ## Links
 
-### Model Domains
+### Model Domain 
 
 
 | Domain | Type | Description | Download Links |
