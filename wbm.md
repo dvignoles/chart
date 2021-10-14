@@ -5,12 +5,6 @@ title: WBM
 
 ## Water Balance Model
 
-Map here
-
-## About
-
-`Description of WBM`
-
 __Source__: CUNY Advanced Science Research Center 
 
 __Temporal Resolution__: Annual/Monthly 2001-2019
@@ -31,15 +25,12 @@ __Spatial Resolution__: 1 minute
 
 ### Model Outputs
 
-#### River Mouth
-WBM results sampled at mouth of 10 major river systems
-
-TODO
-
 #### Basin Mouth
 WBM results sampled at the mouth of WBM basins.
 
-| Variable      | WBM Exeripment | Time Resolution | Download Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+##### Annual / Monthly
+
+| Variable      | WBM Experiment | Time Resolution | Download Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------- | -------------- | --------------- | --------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Discharge     | Pristine       | Annual          | [GeoJSON](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_annual_terra-wbmsed-prist_01min_w&outputFormat=application%2Fjson){:target="_blank"} [GML](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_annual_terra-wbmsed-prist_01min_w&outputFormat=GML3){:target="_blank"}  [CSV](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_annual_terra-wbmsed-prist_01min_w&outputFormat=csv){:target="_blank"}  [SHP](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_annual_terra-wbmsed-prist_01min_w&outputFormat=shape-zip){:target="_blank"}     |
 | Discharge     | Pristine       | Monthly         | [GeoJSON](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_monthly_terra-wbmsed-prist_01min_w&outputFormat=application%2Fjson){:target="_blank"} [GML](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_monthly_terra-wbmsed-prist_01min_w&outputFormat=GML3){:target="_blank"}  [CSV](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_monthly_terra-wbmsed-prist_01min_w&outputFormat=csv){:target="_blank"}  [SHP](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_discharge_monthly_terra-wbmsed-prist_01min_w&outputFormat=shape-zip){:target="_blank"} |
@@ -53,3 +44,39 @@ WBM results sampled at the mouth of WBM basins.
 | Sedimentflux     | Pristine       | Monthly         | [GeoJSON](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-prist_01min_w&outputFormat=application%2Fjson){:target="_blank"} [GML](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-prist_01min_w&outputFormat=GML3){:target="_blank"}  [CSV](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-prist_01min_w&outputFormat=csv){:target="_blank"}  [SHP](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-prist_01min_w&outputFormat=shape-zip){:target="_blank"} |
 | Sedimentflux     | Dist 04        | Annual          | [GeoJSON](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_annual_terra-wbmsed-dist04_01min_w&outputFormat=application%2Fjson){:target="_blank"} [GML](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_annual_terra-wbmsed-dist04_01min_w&outputFormat=GML3){:target="_blank"}  [CSV](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_annual_terra-wbmsed-dist04_01min_w&outputFormat=csv){:target="_blank"}  [SHP](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_annual_terra-wbmsed-dist04_01min_w&outputFormat=shape-zip){:target="_blank"}     |
 | Sedimentflux     | Dist 04        | Monthly         | [GeoJSON](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-dist04_01min_w&outputFormat=application%2Fjson){:target="_blank"} [GML](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-dist04_01min_w&outputFormat=GML3){:target="_blank"}  [CSV](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-dist04_01min_w&outputFormat=csv){:target="_blank"}  [SHP](https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart%3Abasinmouth_sedimentflux_monthly_terra-wbmsed-dist04_01min_w&outputFormat=shape-zip){:target="_blank"} |
+
+##### Daily
+
+Daily results can be requested by date or sampleid. Requesting more than a year of the entire sampling set will likely trigger request limits. 
+
+The available layers (`typeName`) are:
+
+```
+chart:basinmouth_discharge_daily_terra-wbmsed-prist_01min
+chart:basinmouth_discharge_daily_terra-wbmsed-dist04_01min
+chart:basinmouth_bedloadflux_daily_terra-wbmsed-prist_01min
+chart:basinmouth_bedloadflux_daily_terra-wbmsed-dist04_01min
+chart:basinmouth_sedimentflux_daily_terra-wbmsed-prist_01min
+chart:basinmouth_sedimentflux_daily_terra-wbmsed-dist04_01min
+```
+
+The below example requests 1 year of data (2001) for the basin with id=1. Alter the `date_min`, `date_max`, `sampleid_min`, `sampleid_max` parameters accordingly
+to change the request. The available dates range between 2001-01-01 and 2019-12-31. 
+
+See [WFS Reference](https://docs.geoserver.org/latest/en/user/services/wfs/reference.html) and [WFS Output Formats](https://docs.geoserver.org/latest/en/user/services/wfs/outputformats.html) for more details on interacting with WFS.
+
+```bash
+# Curl
+curl --location --request GET 'https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart:basinmouth_discharge_daily_terra-wbmsed-prist_01min&outputFormat=application/json&viewparams=date_min:2001-01-01;date_max:2001-12-31;sampleid_min:1;sampleid_max:1;'
+```
+
+```python
+# python requests
+import requests
+
+url = "https://chartows.environmentalcrossroads.net/chart/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=chart:basinmouth_discharge_daily_terra-wbmsed-prist_01min&outputFormat=application/json&viewparams=date_min:2001-01-01;date_max:2001-12-31;sampleid_min:1;sampleid_max:1;"
+
+response = requests.request("GET", url,)
+
+print(response.text)
+```
