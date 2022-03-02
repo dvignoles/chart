@@ -3,4 +3,5 @@ layout: page
 title: About
 ---
 
-About the project goes here! 
+{% include leaflet_domains.html %}
+`Domains and features of project.`

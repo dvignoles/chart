@@ -13,6 +13,9 @@ __Spatial Resolution__: 1 minute
 
 ## Links
 
+# OUT OF DATE
+NASA Chart group, please use cloud share for data instead of below links. 
+
 ### Model Domain 
 
 

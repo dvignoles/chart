@@ -1,0 +1,118 @@
+
+<div id="mapid" style="width:100%; height: 500px;"></div>
+
+<script>var map = L.map('mapid', {fullscreenControl: true,}).setView([22.755921,90.866328], 5);
+
+// Basemap
+var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+OpenStreetMap_Mapnik.addTo(map);
+
+var legend = L.control({ position: "bottomright"});
+
+// Legend
+
+// Layers
+var wmsUrl = "https://chartows.environmentalcrossroads.net/chart/wms"
+var wms_lc = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:SE-Asia_LandCover_BU_7p50s_aTS2001-2019',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+
+// wms_lc.addTo(map);
+
+var zones = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_zones_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var basins = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_basin_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var subbasins = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_subbasin_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var streamlines = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_streamline_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var mouths = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_mouth_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var confluences = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_confluence_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var wbm_extent = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:hydrostn30_extent_01min',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+var modis_extent = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:modis_raster_extent',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+
+var landcover_extent = L.tileLayer.wms(wmsUrl, {
+    tiled: true,
+    layers: 'chart:landcover_raster_extent',
+    opacity: 0.6,
+    format: 'image/png',
+});
+
+
+zones.addTo(map);
+// basins.addTo(map);
+// subbasins.addTo(map);
+streamlines.addTo(map);
+//mouths.addTo(map);
+
+var baseMaps = {
+    "OSM": OpenStreetMap_Mapnik
+};
+
+var overlayMaps = {
+    "Zones": zones,
+    "Basins": basins,
+    "Subbasins": subbasins,
+    "Streamlines": streamlines,
+    "Mouths": mouths,
+    "Confluences": confluences,
+    "WBM Extent": wbm_extent,
+    "MODIS Extent": modis_extent,
+    "BU Landcover Extent": landcover_extent
+};
+
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+//map.setView([22.755921,90.866328], 4);
+</script>
